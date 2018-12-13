@@ -24,9 +24,20 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="wBZ-PN-OjG"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="AlertView"/>
                                 <connections>
                                     <action selector="actionBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sKd-oo-WfM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G54-9p-spd">
+                                <rect key="frame" x="117" y="260" width="140" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.90483182110000004" green="0.90967941279999998" blue="0.80575430380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="TableView">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="6sD-GA-fSV" kind="show" id="vEN-Fj-VwP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -43,6 +54,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--Sample Table View Controller-->
+        <scene sceneID="3xz-ep-wVs">
+            <objects>
+                <tableViewController id="6sD-GA-fSV" customClass="SampleTableViewController" customModule="AlertViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="165" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="vDa-O5-jdG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyCell" rowHeight="165" id="NyE-Bg-IFQ" customClass="customCell" customModule="AlertViewController" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="165"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NyE-Bg-IFQ" id="Exo-ZI-0QR">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="164.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qoK-pE-4Zp">
+                                            <rect key="frame" x="10" y="10" width="355" height="144.5"/>
+                                            <color key="backgroundColor" red="0.90483182110000004" green="0.90967941279999998" blue="0.80575430380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="qoK-pE-4Zp" firstAttribute="top" secondItem="Exo-ZI-0QR" secondAttribute="top" constant="10" id="RuI-Qn-llt"/>
+                                        <constraint firstItem="qoK-pE-4Zp" firstAttribute="leading" secondItem="Exo-ZI-0QR" secondAttribute="leading" constant="10" id="ZuE-p2-dwV"/>
+                                        <constraint firstAttribute="trailing" secondItem="qoK-pE-4Zp" secondAttribute="trailing" constant="10" id="dtC-zC-eK4"/>
+                                        <constraint firstAttribute="bottom" secondItem="qoK-pE-4Zp" secondAttribute="bottom" constant="10" id="yFd-Gh-g3j"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6sD-GA-fSV" id="JtD-Ev-bYv"/>
+                            <outlet property="delegate" destination="6sD-GA-fSV" id="ZV8-Bv-8GT"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jRy-VB-01n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="880.79999999999995" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>
